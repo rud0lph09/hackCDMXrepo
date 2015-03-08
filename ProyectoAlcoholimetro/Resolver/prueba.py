@@ -1,6 +1,7 @@
 import json
 import urllib2
 from twilio.rest import TwilioRestClient
+import requests
 i = 1
 memo = "+520445519660929"
 yo = "+520445521061342"
@@ -11,7 +12,7 @@ def notif(number):
   auth_token  = "70c4ad4a988de702986ad5574f3a147a"
   client = TwilioRestClient(account_sid, auth_token)
  
-  message = client.messages.create(body="Test",
+  message = client.messages.create(body="No estoy en condiciones de conducir",
       to=number,    # Replace with your phone number
       from_="+16615284910") # Replace with your Twilio numberbody="Prueba, avisame si funciono", 
   print message.sid
@@ -27,5 +28,10 @@ while i == 1 :
     notif(yo)
     notif(memo)
     notif(alonso)
+    url = 'https://warm-depths-9978.herokuapp.com/message/'
+    payload = {'message':{'message': 'no pedo'}}
+    headers = {'content-type': 'application/json'}
+    r = requests.post(url, data=json.dumps(payload), headers=headers)
+    print(r.text)
   pass
   pass

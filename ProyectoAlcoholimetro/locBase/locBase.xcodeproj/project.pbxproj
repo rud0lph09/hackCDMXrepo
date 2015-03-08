@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0015CC11AACD8AD00143C45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0015CC01AACD8AD00143C45 /* Images.xcassets */; };
 		E01CB62E1AAB82140019402E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB62D1AAB82140019402E /* AppDelegate.swift */; };
 		E01CB6301AAB82140019402E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB62F1AAB82140019402E /* ViewController.swift */; };
-		E01CB6351AAB82140019402E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E01CB6341AAB82140019402E /* Images.xcassets */; };
 		E01CB6381AAB82140019402E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E01CB6361AAB82140019402E /* LaunchScreen.xib */; };
 		E01CB6441AAB82140019402E /* locBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB6431AAB82140019402E /* locBaseTests.swift */; };
 		E01CB64F1AAB9F580019402E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01CB64D1AAB9F580019402E /* Main.storyboard */; };
 		E01CB6541AABA3FD0019402E /* SecViewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB6521AABA3FD0019402E /* SecViewCon.swift */; };
 		E0CBDFBD1AABDB3700819FA9 /* http.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CBDFBC1AABDB3700819FA9 /* http.swift */; };
-		E0CBDFC21AAC0CF000819FA9 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CBDFC01AAC0CF000819FA9 /* BLE.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,11 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0015CC01AACD8AD00143C45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E01CB6281AAB82140019402E /* locBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01CB62C1AAB82140019402E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E01CB62D1AAB82140019402E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E01CB62F1AAB82140019402E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E01CB6341AAB82140019402E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E01CB6371AAB82140019402E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E01CB63D1AAB82140019402E /* locBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = locBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01CB6421AAB82140019402E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,10 +40,6 @@
 		E01CB64E1AAB9F580019402E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E01CB6521AABA3FD0019402E /* SecViewCon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecViewCon.swift; path = ../SecViewCon.swift; sourceTree = "<group>"; };
 		E0CBDFBC1AABDB3700819FA9 /* http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = http.swift; sourceTree = "<group>"; };
-		E0CBDFBF1AAC0CF000819FA9 /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLE.h; path = "../../../../Downloads/iOS-master/BLEFramework/BLE/BLE.h"; sourceTree = "<group>"; };
-		E0CBDFC01AAC0CF000819FA9 /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLE.m; path = "../../../../Downloads/iOS-master/BLEFramework/BLE/BLE.m"; sourceTree = "<group>"; };
-		E0CBDFC11AAC0CF000819FA9 /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLEDefines.h; path = "../../../../Downloads/iOS-master/BLEFramework/BLE/BLEDefines.h"; sourceTree = "<group>"; };
-		E0CBDFC51AAC258300819FA9 /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,15 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				E01CB62D1AAB82140019402E /* AppDelegate.swift */,
-				E0CBDFC51AAC258300819FA9 /* bridge.h */,
 				E01CB6521AABA3FD0019402E /* SecViewCon.swift */,
 				E01CB62F1AAB82140019402E /* ViewController.swift */,
-				E01CB6341AAB82140019402E /* Images.xcassets */,
 				E01CB64D1AAB9F580019402E /* Main.storyboard */,
-				E0CBDFBF1AAC0CF000819FA9 /* BLE.h */,
-				E0CBDFC01AAC0CF000819FA9 /* BLE.m */,
-				E0CBDFC11AAC0CF000819FA9 /* BLEDefines.h */,
 				E0CBDFBC1AABDB3700819FA9 /* http.swift */,
+				E0015CC01AACD8AD00143C45 /* Images.xcassets */,
 				E01CB6361AAB82140019402E /* LaunchScreen.xib */,
 				E01CB62B1AAB82140019402E /* Supporting Files */,
 			);
@@ -207,9 +198,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0015CC11AACD8AD00143C45 /* Images.xcassets in Resources */,
 				E01CB64F1AAB9F580019402E /* Main.storyboard in Resources */,
 				E01CB6381AAB82140019402E /* LaunchScreen.xib in Resources */,
-				E01CB6351AAB82140019402E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +221,6 @@
 				E01CB6301AAB82140019402E /* ViewController.swift in Sources */,
 				E0CBDFBD1AABDB3700819FA9 /* http.swift in Sources */,
 				E01CB62E1AAB82140019402E /* AppDelegate.swift in Sources */,
-				E0CBDFC21AAC0CF000819FA9 /* BLE.m in Sources */,
 				E01CB6541AABA3FD0019402E /* SecViewCon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +349,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = locBase/bridge.h;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,7 +365,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = locBase/bridge.h;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

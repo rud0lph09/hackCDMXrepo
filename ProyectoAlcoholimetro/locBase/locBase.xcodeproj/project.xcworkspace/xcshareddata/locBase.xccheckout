@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A5A0C231-5082-4C01-9F86-7AD0EEA6B82B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>locBase</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E6BE7BDE89D5C13E4D4EBA112092EBBB26B57F08</key>
+		<string>https://github.com/rud0lph09/hackCDMXrepo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ProyectoAlcoholimetro/locBase/locBase.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E6BE7BDE89D5C13E4D4EBA112092EBBB26B57F08</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rud0lph09/hackCDMXrepo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E6BE7BDE89D5C13E4D4EBA112092EBBB26B57F08</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E6BE7BDE89D5C13E4D4EBA112092EBBB26B57F08</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hackCDMXrepo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

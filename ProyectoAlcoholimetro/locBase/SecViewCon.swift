@@ -8,22 +8,25 @@
 
 import UIKit
 import Foundation
-import CoreBluetooth
+
 
 
 class SecViewCon: UIViewController {
-    
-    var pedez: CGFloat = 1.145
+    var calvo : CGFloat = 0
+    var pedez: CGFloat = 1
     var unidades: CGFloat = 293
     var max: CGFloat = 1.145
-    var ble: BLE!
+    
     
     
 
+    @IBOutlet weak var cara: UIImageView!
     @IBOutlet weak var progBar: UILabel!
     @IBOutlet weak var backResponder: UILabel!
     
     @IBAction func event(sender: AnyObject) {
+        getHttp()
+        pedez = calvo
         loader()
 
     }
@@ -34,6 +37,9 @@ class SecViewCon: UIViewController {
         super.viewDidLoad()
         self.progBar.frame = CGRect(x: -253, y: 407, width: 293, height: 62)
         self.daLabel.text = "Bienvenido a Esta cosa!"
+        self.cara.image = UIImage(named: "semaforo")
+        
+        
         
         
         
@@ -41,16 +47,17 @@ class SecViewCon: UIViewController {
     }
     
     
-    @IBAction func buttonConectarBLE(sender: AnyObject) {
-        //scanForPeripherals()
-    }
+    
     func loader(){
+        
+        getHttp()
+        pedez = calvo
         
         if pedez >= max {
             pedez = max
         }
         var mensaje: String
-        var llenado: CGFloat = (unidades)*(pedez) - 293
+        var llenado: CGFloat = (pedez)*(unidades) - 293
         var inicio: CGFloat = 41 - (unidades)
         var calTime: Double = Double(CGFloat(pedez)*5)
         var time: NSTimeInterval = calTime
@@ -60,15 +67,18 @@ class SecViewCon: UIViewController {
             self.daLabel.text = "Te encuentras bien para manejar :)."
             mensaje = "Estoy bien"
             sms(mensaje)
+            self.cara.image = UIImage(named: "puedesconducir")
         } else if pedez <= 0.7{
             self.progBar.backgroundColor = UIColor.yellowColor()
             self.daLabel.text = "Puedes manejar pero ten precaución."
             mensaje = "Estoy Mas o menos"
+            self.cara.image = UIImage(named: "precaucion")
             sms(mensaje)
         } else if pedez >= 0.8{
             self.progBar.backgroundColor = UIColor.redColor()
             self.daLabel.text = "Legalmente ya no puedes conducir, te recomendamos pedir un taxi."
             mensaje = "pedo"
+            self.cara.image = UIImage(named: "nopuedesconducir")
             sms(mensaje)
         } else if pedez > 1.2{
             self.backResponder.backgroundColor = UIColor.redColor()
@@ -99,7 +109,7 @@ class SecViewCon: UIViewController {
         var element: [String : String] = ["message": "\(mensaje)"]
         
         let req = Agent.post("https://warm-depths-9978.herokuapp.com/message")
-        req.send([ "order": element])
+        req.send([ "message": element])
         req.end({ (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> Void in
             // react to the result of your request
             println("listo")
@@ -107,22 +117,48 @@ class SecViewCon: UIViewController {
     }
     
     
-    func bleDidRecieveData(data: NSString, length: Int)-> Void{
+    func getHttp () {
         
-        var datos: [NSMutableArray]?
-        for var i = 0; i < length; ++i {
-            var result: UInt32 = 0
+        let urlAsString = "https://morning-brook-3318.herokuapp.com/last/last.json"
+        let url = NSURL(string: urlAsString)!
+        let urlSession = NSURLSession.sharedSession()
+        let jsonQuery = urlSession.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
             
-            var scanner : NSScanner = NSScanner.localizedScannerWithString(data) as NSScanner
-            scanner.scanLocation = 0
-            scanner.scanHexInt(&result)
+            if (error != nil) {
+                println(error.localizedDescription)
+            }
+            var err: NSError?
+            
+            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
+            if (err != nil) {
+                println("JSON Error \(err!.localizedDescription)")
+            }
+            
+            // 4
+            let jsonSit: String! = jsonResult["status"] as NSString
+            let jsonLat: String! = jsonResult["latitude"] as NSString
+            let jsonLon: String! = jsonResult["longitude"] as NSString
+            let jsonLoc: String! = jsonResult["status"] as NSString
             
             
-            
-        }
+            dispatch_async(dispatch_get_main_queue(), {
+                var sit = jsonSit
+                var lat = jsonLat
+                self.calvo = CGFloat(jsonLoc.toInt()!)
+                self.calvo = self.calvo*2
+                var lon = jsonLon
+                println("\(jsonSit)")
+                
+            })
+        })
+        // 5
+        jsonQuery.resume()
+        
+        
         
         
     }
+    
     /*
     /*
     
